@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GreenDen</title>
+    <!--Tailwind CSS CDN link-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Responsive Navbar-->
+    <nav class="bg-green-100 p-3 flex justify-between items-center shadow-xl sticky top-0 z-50">
+        <h1 class="text-2xl">Greenden</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+
+        <ul class="flex gap-5 text-gray-600 hidden md:flex">
+            <li>
+                <a href="index.html" class="text-green-700 hover:text-green-900">Home</a>
+            </li>
+            <li>
+                <a href="products.html" class="text-green-700 hover:text-green-900">Products</a>
+            </li>
+            <li>
+                <a href="contact.html" class="text-green-700 hover:text-green-900">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden bg-green-50 p-5 flex flex-col gap-4 text-center text-gray-600 shadow-md md:hidden">
+        <a class="hover:underline hover:text-black block py-2" href="index.html">Home</a>
+        <a class="hover:underline hover:text-black block py-2" href="Product page.html">Products</a>
+        <a class="hover:underline hover:text-black block py-2" href="contact page.html">Contact</a>
+    </div>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuIcon.addEventListener('click', () => {
+            // Toggles the 'hidden' class to show/hide the mobile menu
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!--Product Section-->
+    <section>
+        <div class=" grid justify-center">
+            <h1 class="font-bold text-2xl mt-10 ">Our Products</h1>
+        </div>
+        <div class="flex justify-center items-center">
+            <input type="text" id="search-input" class=" rounded-xl border border-black p-2 m-3" style="width:600px;"
+                placeholder="Search for a product...">
+            <button id="search-btn" class="bg-green-600 text-white p-2 rounded-xl">Search</button>
+        </div>
+    </section>
+
+    <section class="p-4 text-center">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+
+            <div>
+                <img src="./images/rose.jpg" alt="Rose"
+                    class="h-60 inline hover:shadow-xl transform hover:translate-y-2">
+                <h2 class="mt-5">Rose Plant</h2>
+                <p> $20</p>
+            </div>
+            <div>
+                <img src="./images/indoor.jpg" alt="Indoor"
+                    class="h-60 inline hover:shadow-xl transform hover:translate-y-2">
+                <h2 class="mt-5">Indoor Plant</h2>
+                <p> $15</p>
+            </div>
+            <div>
+                <img src="./images/marigold.jpg" alt="Marigold"
+                    class="h-60 inline hover:shadow-xl transform hover:-translate-y-2">
+                <h2 class="mt-5">Marigold Plant</h2>
+                <p> $10</p>
+
+            </div>
+            <div>
+                <img src="./images/hibiscus.jpg" alt="Hibiscus"
+                    class="h-60 inline hover:shadow-xl transform hover:-translate-y-2">
+                <h2 class="mt-5">Hibiscus Plant</h2>
+                <p> $12</p>
+            </div>
+            <div>
+                <img src="./images/indoor2.jpg" alt="Indoor 2"
+                    class="h-60 inline hover:shadow-xl transform hover:-translate-y-2">
+                <h2 class="mt-5">Indoor Plant 2</h2>
+                <p> $18</p>
+            </div>
+            <div>
+                <img src="./images/indoor3.jpg" alt="Indoor 3"
+                    class="h-60 inline hover:shadow-xl transform hover:-translate-y-2">
+                <h2 class="mt-5">Indoor Plant 3</h2>
+                <p> $15</p>
+            </div>
+            <div>
+                <img src="./images/indoor4.jpg" alt="Indoor 4"
+                    class="h-60 inline hover:shadow-xl transform hover:-translate-y-2">
+                <h2 class="mt-5">Indoor Plant 4</h2>
+                <p> $20</p>
+            </div>
+            <div>
+                <img src="./images/indoor5.jpg" alt="Indoor 5"
+                    class="h-60 inline hover:shadow-xl hover:transform hover:-translate-y-2">
+                <h2 class="mt-5">Indoor Plant 5 </h2>
+                <p> $12</p>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--Footer Section-->
+    <section class="bg-green-100 p-10 text-center flex flex-col">
+        <h1 class="text-3xl font-bold mt-5">GreenDen</h1>
+        <p>We are committed to providing the best indoor plants and exceptional customer service.</p>
+        <p>&copy; 2024 GreenDen. All rights reserved.</p>
+    </section>
+
+</body>
+
+</html>
